@@ -1,0 +1,21 @@
+diff -ur tclreadline-2.1.0.orig/configure.in tclreadline-2.1.0/configure.in
+--- tclreadline-2.1.0.orig/configure.in	2000-12-08 01:45:45.000000000 +0100
++++ tclreadline-2.1.0/configure.in	2004-08-18 18:02:21.871828304 +0200
+@@ -57,7 +57,7 @@
+ 
+ AC_MSG_CHECKING([which tclConfig.sh to use])
+ TCL_LIB_DIR=""
+-for dir in $tcl_search /usr/lib /usr/local/lib $exec_prefix/lib /usr/local/lib/unix /opt/tcl/lib; do
++for dir in $tcl_search $libdir /usr/local/lib $exec_prefix/lib /usr/local/lib/unix /opt/tcl/lib; do
+     if test -r $dir/tclConfig.sh; then
+         TCL_LIB_DIR=$dir
+         break
+@@ -89,7 +89,7 @@
+ if test "${prefix}" = "NONE"; then
+     prefix=$TCL_PREFIX
+ fi
+-TCLRL_LIBDIR="${prefix}/lib"
++TCLRL_LIBDIR="${libdir}"
+ AC_SUBST(TCLRL_LIBDIR)
+ TCLRL_DIR="${TCLRL_LIBDIR}/tclreadline$VERSION"
+ AC_SUBST(TCLRL_DIR)
