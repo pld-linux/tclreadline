@@ -2,7 +2,7 @@ Summary:	Readline Tcl extension
 Summary(pl):	Rozszerzenie Readline dla Tcl-a
 Name:		tclreadline
 Version:	2.1.0
-Release:	1
+Release:	2
 License:	BSD
 Group:		Development/Languages/Tcl
 Source0:	http://dl.sourceforge.net/tclreadline/%{name}-%{version}.tar.gz
@@ -87,13 +87,19 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR="$RPM_BUILD_ROOT"
 
+ln -sf libtclreadline.so.0.0 $RPM_BUILD_ROOT%{_libdir}/libtclreadline-%{version}.so
+
 %clean
 rm -rf $RPM_BUILD_ROOT
+
+%post   -p /sbin/ldconfig
+%postun -p /sbin/ldconfig
 
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog
 %attr(755,root,root)  %{_libdir}/*.so
+%attr(755,root,root)  %{_libdir}/*.so.*.*
 %dir %{_libdir}/%{name}%{version}
 %{_libdir}/%{name}%{version}/*.tcl
 %{_mandir}/mann/*.n*
