@@ -1,5 +1,5 @@
 Summary:	Readline Tcl extension
-Summary(pl):	Rozszerzenie Readline dla Tcl
+Summary(pl):	Rozszerzenie Readline dla Tcl-a
 Name:		tclreadline
 Version:	2.1.0
 Release:	1
@@ -16,18 +16,33 @@ BuildRequires:	tcl-devel >= 8.3.4
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-The tclreadline package makes the GNU Readline library available for
-interactive tcl shells. This includes history expansion and
-file/command completion. Command completion for all tcl/tk commands is
+The tclreadline package makes the GNU readline library available for
+interactive Tcl shells. This includes history expansion and
+file/command completion. Command completion for all Tcl/Tk commands is
 provided and commmand completers for user defined commands can be
-easily added. tclreadline can also be used for tcl scripts which want
+easily added. tclreadline can also be used for Tcl scripts which want
 to use a shell like input interface. In this case the
 ::tclreadline::readline read command has to be called explicitly.
 
 The advantage of tclreadline is that it uses the callback handler
-mechanism of the gnu readline while it processes tcl events. This way
-X events from a wish gui will processed as well as events from the
+mechanism of the GNU readline while it processes Tcl events. This way
+X events from a wish GUI will processed as well as events from the
 tclreadline line interface.
+
+%description -l pl
+Pakiet tclreadline udostêpnia bibliotekê GNU Readline dla
+interaktywnych pow³ok Tcl-a. Obejmuje to rozwijanie historii oraz
+dope³nianie nazw plików i poleceñ. Udostêpnione jest dope³nianie
+poleceñ dla wszystkich poleceñ Tcl/Tk, a obs³uga dope³niania poleceñ
+zdefiniowanych przez u¿ytkownika mo¿e byæ ³atwo dodana. tclreadline
+mo¿e byæ u¿ywany tak¿e dla skryptów Tcl chc±cych u¿ywaæ interfejsu
+wej¶ciowego w stylu pow³oki. W tym przypadku polecenie czytaj±ce
+::tclreadline::readline musi byæ wywo³ane explicite.
+
+Zalet± tclreadline jest to, ¿e u¿ywa mechanizmu obs³ugi przez callback
+z GNU readline podczas przetwarzania zdarzeñ Tcl. W ten sposób bêd±
+przetwarzane zarówno zdarzenia X z interfejsu graficznego wish, jak i
+te z interfejsu liniowego tclreadline.
 
 %package devel
 Summary:	Readline Tcl extension developement files
