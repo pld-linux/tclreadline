@@ -7,6 +7,7 @@ License:	BSD
 Group:		Development/Languages/Tcl
 Source0:	http://dl.sourceforge.net/tclreadline/%{name}-%{version}.tar.gz
 # Source0-md5:	219d0247a1373578080940ebde53bdd0
+Patch0:		%{name}-amd64.patch
 URL:		http://tclreadline.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -70,6 +71,7 @@ Statyczne biblioteki tclreadline.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 rm -f config/missing
