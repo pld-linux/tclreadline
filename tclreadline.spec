@@ -87,7 +87,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR="$RPM_BUILD_ROOT"
 
-ln -sf libtclreadline.so.0.0 $RPM_BUILD_ROOT%{_libdir}/libtclreadline-%{version}.so
+ln -sf libtclreadline-%{version}.so $RPM_BUILD_ROOT%{_libdir}/libtclreadline.so.0.0
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -98,8 +98,8 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog
-%attr(755,root,root)  %{_libdir}/*.so
-%attr(755,root,root)  %{_libdir}/*.so.*.*
+%attr(755,root,root)  %{_libdir}/lib*.so
+%attr(755,root,root)  %{_libdir}/lib*.so.*.*
 %dir %{_libdir}/%{name}%{version}
 %{_libdir}/%{name}%{version}/*.tcl
 %{_mandir}/mann/*.n*
