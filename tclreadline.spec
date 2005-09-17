@@ -2,7 +2,7 @@ Summary:	Readline Tcl extension
 Summary(pl):	Rozszerzenie Readline dla Tcl-a
 Name:		tclreadline
 Version:	2.1.0
-Release:	3
+Release:	4
 License:	BSD
 Group:		Development/Languages/Tcl
 Source0:	http://dl.sourceforge.net/tclreadline/%{name}-%{version}.tar.gz
