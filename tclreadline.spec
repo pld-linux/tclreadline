@@ -1,5 +1,5 @@
 Summary:	Readline Tcl extension
-Summary(pl):	Rozszerzenie Readline dla Tcl-a
+Summary(pl.UTF-8):   Rozszerzenie Readline dla Tcl-a
 Name:		tclreadline
 Version:	2.1.0
 Release:	4
@@ -30,43 +30,43 @@ mechanism of the GNU readline while it processes Tcl events. This way
 X events from a wish GUI will processed as well as events from the
 tclreadline line interface.
 
-%description -l pl
-Pakiet tclreadline udostêpnia bibliotekê GNU Readline dla
-interaktywnych pow³ok Tcl-a. Obejmuje to rozwijanie historii oraz
-dope³nianie nazw plików i poleceñ. Udostêpnione jest dope³nianie
-poleceñ dla wszystkich poleceñ Tcl/Tk, a obs³uga dope³niania poleceñ
-zdefiniowanych przez u¿ytkownika mo¿e byæ ³atwo dodana. tclreadline
-mo¿e byæ u¿ywany tak¿e dla skryptów Tcl chc±cych u¿ywaæ interfejsu
-wej¶ciowego w stylu pow³oki. W tym przypadku polecenie czytaj±ce
-::tclreadline::readline musi byæ wywo³ane explicite.
+%description -l pl.UTF-8
+Pakiet tclreadline udostÄ™pnia bibliotekÄ™ GNU Readline dla
+interaktywnych powÅ‚ok Tcl-a. Obejmuje to rozwijanie historii oraz
+dopeÅ‚nianie nazw plikÃ³w i poleceÅ„. UdostÄ™pnione jest dopeÅ‚nianie
+poleceÅ„ dla wszystkich poleceÅ„ Tcl/Tk, a obsÅ‚uga dopeÅ‚niania poleceÅ„
+zdefiniowanych przez uÅ¼ytkownika moÅ¼e byÄ‡ Å‚atwo dodana. tclreadline
+moÅ¼e byÄ‡ uÅ¼ywany takÅ¼e dla skryptÃ³w Tcl chcÄ…cych uÅ¼ywaÄ‡ interfejsu
+wejÅ›ciowego w stylu powÅ‚oki. W tym przypadku polecenie czytajÄ…ce
+::tclreadline::readline musi byÄ‡ wywoÅ‚ane explicite.
 
-Zalet± tclreadline jest to, ¿e u¿ywa mechanizmu obs³ugi przez callback
-z GNU readline podczas przetwarzania zdarzeñ Tcl. W ten sposób bêd±
-przetwarzane zarówno zdarzenia X z interfejsu graficznego wish, jak i
+ZaletÄ… tclreadline jest to, Å¼e uÅ¼ywa mechanizmu obsÅ‚ugi przez callback
+z GNU readline podczas przetwarzania zdarzeÅ„ Tcl. W ten sposÃ³b bÄ™dÄ…
+przetwarzane zarÃ³wno zdarzenia X z interfejsu graficznego wish, jak i
 te z interfejsu liniowego tclreadline.
 
 %package devel
 Summary:	Readline Tcl extension developement files
-Summary(pl):	Pliki do tworzenia z wykorzystaniem tclreadline
+Summary(pl.UTF-8):   Pliki do tworzenia z wykorzystaniem tclreadline
 Group:		Development/Languages/Tcl
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Readline Tcl extension developement files.
 
-%description devel -l pl
+%description devel -l pl.UTF-8
 Pliki do tworzenia z wykorzystaniem tclreadline.
 
 %package static
 Summary:	Static Readline Tcl extension libraries
-Summary(pl):	Statyczne biblioteki tclreadline
+Summary(pl.UTF-8):   Statyczne biblioteki tclreadline
 Group:		Development/Languages/Tcl
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static Readline Tcl extension libraries.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczne biblioteki tclreadline.
 
 %prep
