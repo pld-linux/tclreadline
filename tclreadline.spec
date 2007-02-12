@@ -1,5 +1,5 @@
 Summary:	Readline Tcl extension
-Summary(pl.UTF-8):   Rozszerzenie Readline dla Tcl-a
+Summary(pl.UTF-8):	Rozszerzenie Readline dla Tcl-a
 Name:		tclreadline
 Version:	2.1.0
 Release:	4
@@ -47,7 +47,7 @@ te z interfejsu liniowego tclreadline.
 
 %package devel
 Summary:	Readline Tcl extension developement files
-Summary(pl.UTF-8):   Pliki do tworzenia z wykorzystaniem tclreadline
+Summary(pl.UTF-8):	Pliki do tworzenia z wykorzystaniem tclreadline
 Group:		Development/Languages/Tcl
 Requires:	%{name} = %{version}-%{release}
 
@@ -59,7 +59,7 @@ Pliki do tworzenia z wykorzystaniem tclreadline.
 
 %package static
 Summary:	Static Readline Tcl extension libraries
-Summary(pl.UTF-8):   Statyczne biblioteki tclreadline
+Summary(pl.UTF-8):	Statyczne biblioteki tclreadline
 Group:		Development/Languages/Tcl
 Requires:	%{name}-devel = %{version}-%{release}
 
